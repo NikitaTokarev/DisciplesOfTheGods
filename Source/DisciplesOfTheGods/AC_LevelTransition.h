@@ -25,6 +25,11 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
+
+	UFUNCTION(Server, Reliable)
+	void LoadLevelFinished_Server(bool bSuccessful, const FString& LevelName);
+	void LoadLevelFinished_Server_Implementation(bool bSuccessful, const FString& LevelName);
+
 	UPROPERTY(BlueprintAssignable)
 	FDelegateLevelLoaded OnLevelLoaded;
 		
