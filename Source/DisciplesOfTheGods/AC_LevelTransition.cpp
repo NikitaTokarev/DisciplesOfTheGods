@@ -34,16 +34,9 @@ void UAC_LevelTransition::AsyncLevelLoad(const FString& LevelDir, const FString&
 	LoadPackageAsync(LevelDir + LevelName,
 		FLoadPackageAsyncDelegate::CreateLambda([=](const FName& PackageName, UPackage* LoadedPackage, EAsyncLoadingResult::Type Result)
 			{
-				OnLevelLoaded.Broadcast(Result == EAsyncLoadingResult::Succeeded, FName(*LevelName));
-				//LoadLevelFinished_Server(Result == EAsyncLoadingResult::Succeeded, LevelName);
+				OnLevelLoaded.Broadcast(Result == EAsyncLoadingResult::Succeeded, FName(*LevelName));				
 			}
 		),
 		0,
 		PKG_ContainsMap);
-}
-
-
-void UAC_LevelTransition::LoadLevelFinished_Server_Implementation(bool bSuccessful, const FString& LevelName)
-{
-	OnLevelLoaded.Broadcast(bSuccessful, FName(*LevelName));
 }

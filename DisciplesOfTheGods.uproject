@@ -13,6 +13,12 @@
 			]
 		}
 	],
+	"Plugins": [		
+		{
+			"Name": "EpicLeaderboard",
+			"Enabled": true
+		}
+	],
 	"TargetPlatforms": [
 		"Android"
 	]
