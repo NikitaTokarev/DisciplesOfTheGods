@@ -1,10 +1,10 @@
 package com.epicgames.ue4;
 
-import com.YourCompany.DisciplesOfTheGods.OBBDownloaderService;
-import com.YourCompany.DisciplesOfTheGods.DownloaderActivity;
+import com.WolverineStudio.DisciplesOfTheGods.OBBDownloaderService;
+import com.WolverineStudio.DisciplesOfTheGods.DownloaderActivity;
 import android.app.Activity;
 import com.google.android.vending.expansion.downloader.Helpers;
-import com.YourCompany.DisciplesOfTheGods.OBBData;
+import com.WolverineStudio.DisciplesOfTheGods.OBBData;
 
 
 public class DownloadShim
